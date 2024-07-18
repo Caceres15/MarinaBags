@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width. initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="estilo.css">
+    <script src="app.js" async></script>
+    <title>Tienda de Carteras y accesorios| </title>
+</head>
+<body>
+    <header>
+      <!--  <h1>Tienda de Carteras mi LUCECITA</h1> -->
+      <nav id="menu">
+      
+        <ul class="nav-menu">
+          <li><a href="index.html">GALERIA</a></li>
+          <li><a href="Clientes.html">LISTA DE CLIENTES</a></li>
+          <li><a href="contacto.html">CONTÁCTANOS</a></li>
+        </ul>
+      </nav>
+    </header>
+<h2 style="text-align: center; padding-top: 10px;">LISTADO DE CLIENTES FRECUENTES </h2>
+<div style="background-color: #FDEBD0;">
+<table id="clientesTable">
+    <thead>
+        <tr>
+            <th>Empresa</th>
+            <th>País</th>
+            <th>Industria</th>
+            <th>Empleados</th>
+            <th>Ingresos</th>
+        </tr>
+    </thead>
+    <tbody id="clientesBody">
+        <!-- Aquí se generará dinámicamente el contenido -->
+    </tbody>
+</table>
+</div>
+<script>
+    // XML en formato de texto
+    const xmlText = `<?xml version="1.0" encoding="UTF-8"?>
+        <dataroot xmlns:od="urn:schemas-microsoft-com:officedata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:noNamespaceSchemaLocation="Clientes.xsd" generated="2024-07-17T21:38:47">
+        <Clientes>
+        <Empresa>Raspberry Pi Foundation</Empresa>
+        <País>United Kingdom</País>
+        <Industria>Education Management</Industria>
+        <Empleados>210</Empleados>
+        <Ingresos>46</Ingresos>
+        </Clientes>
+        <Clientes/>
+        <Clientes/>
+        <Clientes>
+        <Empresa>Client Server</Empresa>
+        <País>United Kingdom</País>
+        <Industria>Staffing &amp; Recruiting</Industria>
+        <Empleados>179</Empleados>
+        <Ingresos>31</Ingresos>
+        </Clientes>
+        <Clientes/>
+        <Clientes/>
+        <Clientes/>
+        <Clientes>
+        <Empresa>TU Career Center</Empresa>
+        <País>Austria</País>
+        <Industria>Management Consulting</Industria>
+        <Empleados>9</Empleados>
+        <Ingresos>12</Ingresos>
+        </Clientes>
+        <Clientes/>
+        <Clientes/>
+        <Clientes/>
+        <Clientes>
+        <Empresa>Samsara</Empresa>
+        <País>United States</País>
+        <Industria>Computer Software</Industria>
+        <Empleados>210</Empleados>
+        <Ingresos>428</Ingresos>
+        </Clientes>
+        <Clientes/>
+        <Clientes/>
+        <Clientes/>
+        <Clientes>
+        <Empresa>ENVEA</Empresa>
+        <País>Slovakia</País>
+        <Industria>Architecture &amp; Planning</Industria>
+        <Empleados>17</Empleados>
+        <Ingresos>17</Ingresos>
+        </Clientes>
+        <Clientes/>
+        <Clientes/>
+        <Clientes/>
+        <Clientes>
+        <Empresa>American Gaming Systems</Empresa>
+        <País>United States</País>
+        <Industria>Gambling &amp; Casinos</Industria>
+        <Empleados>610</Empleados>
+        <Ingresos>298</Ingresos>
+        </Clientes>
+        <Clientes/>
+        <Clientes/>
+        <Clientes/>
+        <Clientes>
+        <Empresa>Johnson Electric</Empresa>
+        <País>Hong Kong</País>
+        <Industria>Electrical/Electronic Manufacturing</Industria>
+        <Empleados>500</Empleados>
+        <Ingresos>3.2</Ingresos>
+        </Clientes>
+        <Clientes/>
+        <Clientes/>
+        <Clientes/>
+        </dataroot>`;
+
+    // Parsear el XML
+    let parser = new DOMParser();
+    let xmlDoc = parser.parseFromString(xmlText, "text/xml");
+
+    // Obtener los elementos de Cliente
+    let clientes = xmlDoc.getElementsByTagName("Clientes");
+
+    // Generar filas de la tabla
+    let tableBody = document.getElementById("clientesBody");
+    for (let cliente of clientes) {
+        if (cliente.getElementsByTagName("Empresa").length > 0) {
+            let empresa = cliente.getElementsByTagName("Empresa")[0].textContent;
+            let pais = cliente.getElementsByTagName("País")[0].textContent;
+            let industria = cliente.getElementsByTagName("Industria")[0].textContent;
+            let empleados = cliente.getElementsByTagName("Empleados")[0].textContent;
+            let ingresos = cliente.getElementsByTagName("Ingresos")[0].textContent;
+
+            let newRow = `<tr>
+                            <td>${empresa}</td>
+                            <td>${pais}</td>
+                            <td>${industria}</td>
+                            <td>${empleados}</td>
+                            <td>${ingresos}</td>
+                        </tr>`;
+            tableBody.innerHTML += newRow;
+        }
+    }
+</script>
+<div class="social">
+    <a href="#"><img src="img/facebook.png" alt="facebook" class="red"></a>
+    <a href="#"><img src="img/youtube.png" alt="youtube" class="red" ></a>
+    <a href="#"><img src="img/whatsapp.png" alt="whastapp" class="red"></a>
+    <a href="#"><img src="img/instagram.png" alt="instagram" class="red"></a>
+</div>
+</body>
+</html>

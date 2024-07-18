@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width. initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="estilo.css">
+    <script src="app.js" async></script>
+    <title>Tienda de Carteras y accesorios| </title>
+</head>
+<body>
+    <header>
+      <!--  <h1>Tienda de Carteras mi LUCECITA</h1> -->
+      <nav id="menu">
+      
+        <ul class="nav-menu">
+          <li><a href="index.html">GALERIA</a></li>
+          <li><a href="Clientes.html">LISTA DE CLIENTES</a></li>
+          <li><a href="contacto.html">CONTÁCTANOS</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section class="contenedor">
+        <!-- Contenedor de elementos -->
+        <div class="contenedor-items">
+            <div class="item">
+                <span class="titulo-item">Cartera Suecia</span>
+                <img src="img/carteranegra.jpg" alt="" class="img-item img1">
+                <span class="precio-item">S/ 139.90 </span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item ">
+                <span class="titulo-item">Bolso Bertha</span>
+                <img src="img/carteranaranja.jpg" alt="" class="img-item img2">
+                <span class="precio-item">S/ 149.95</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item ">
+                <span class="titulo-item">Cartera Pequeña Roselyn</span>
+                <img src="img/carterablanca.jpg" alt="" class="img-item img3">
+                <span class="precio-item">S/ 111.00</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item " >
+                <span class="titulo-item">Cartera Tokio</span>
+                <img src="img/carteraroja.jpg" alt="" class="img-item img4">
+                <span class="precio-item">S/ 129.00</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item " >
+                <span class="titulo-item">Cartera Tiare</span>
+                <img src="img/carteraverde.jpg" alt="" class="img-item img5">
+                <span class="precio-item">S/ 69.00</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item " >
+                <span class="titulo-item">Bolso Tini</span>
+                <img src="img/carterarosada.jpg" alt="" class="img-item img6">
+                <span class="precio-item">S/ 44.00</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item " >
+                <span class="titulo-item">Morral Pequeño Ameri</span>
+                <img src="img/carteraverdelimon.jpg" alt="" class="img-item img7">
+                <span class="precio-item">S/ 69.00</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item ">
+                <span class="titulo-item">Cartera Isa</span>
+                <img src="img/carterablancalarga.jpg" alt="" class="img-item img8">
+                <span class="precio-item">S/ 64.00</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item ">
+                <span class="titulo-item">Mochila Tokio</span>
+                <img src="img/mochilazul.jpg" alt="" class="img-item img9">
+                <span class="precio-item">S/ 104.00</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item ">
+                <span class="titulo-item">Shopper con doble manija</span>
+                <img src="img/carterablancanegra.jpg" alt="" class="img-item img10">
+                <span class="precio-item">S/ 54.00</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item ">
+                <span class="titulo-item">Mochila con cierre</span>
+                <img src="img/mochilaceleste.jpg" alt="" class="img-item img11">
+                <span class="precio-item">S/ 32.00</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item ">
+                <span class="titulo-item">Mochila Atena</span>
+                <img src="img/mochilanegra.jpg" alt="" class="img-item img12">
+                <span class="precio-item">S/ 97.00</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+        </div>
+        <!-- Carrito de Compras -->
+        <div class="carrito" id="carrito">
+            <div class="header-carrito">
+                <h2>Tu Carrito</h2>
+            </div>
+
+            <div class="carrito-items">
+                <!-- 
+                <div class="carrito-item">
+                    <img src="img/boxengasse.png" width="80px" alt="">
+                    <div class="carrito-item-detalles">
+                        <span class="carrito-item-titulo">Box Engasse</span>
+                        <div class="selector-cantidad">
+                            <i class="fa-solid fa-minus restar-cantidad"></i>
+                            <input type="text" value="1" class="carrito-item-cantidad" disabled>
+                            <i class="fa-solid fa-plus sumar-cantidad"></i>
+                        </div>
+                        <span class="carrito-item-precio">S/ 15.000.00</span>
+                    </div>
+                   <span class="btn-eliminar">
+                        <i class="fa-solid fa-trash"></i>
+                   </span>
+                </div>
+                <div class="carrito-item">
+                    <img src="img/skinglam.png" width="80px" alt="">
+                    <div class="carrito-item-detalles">
+                        <span class="carrito-item-titulo">Skin Glam</span>
+                        <div class="selector-cantidad">
+                            <i class="fa-solid fa-minus restar-cantidad"></i>
+                            <input type="text" value="3" class="carrito-item-cantidad" disabled>
+                            <i class="fa-solid fa-plus sumar-cantidad"></i>
+                        </div>
+                        <span class="carrito-item-precio">S/ 18.000.00</span>
+                    </div>
+                   <button class="btn-eliminar">
+                        <i class="fa-solid fa-trash"></i>
+                   </button>
+                </div>
+                 -->
+            </div>
+            <div class="carrito-total">
+                <div class="fila">
+                    <strong>Tu Total</strong>
+                    <span class="carrito-precio-total">
+                        S/ 120,000.00
+                    </span>
+                </div>
+                <button class="btn-pagar">Pagar <i class="fa-solid fa-bag-shopping"></i> </button>
+            </div>
+        </div>
+    </section>
+    <section>
+       <div class="container">
+		<!-- (p>lorem)*20 (código a usar si tienes instalada la extensión emmet)-->
+	</div>
+
+	<div class="container">
+		<!-- (p>lorem)*20 (código a usar si tienes instalada la extensión emmet)-->
+	</div>
+
+	<div class="social">
+		<a href="#"><img src="img/facebook.png" alt="facebook" class="red"></a>
+		<a href="#"><img src="img/youtube.png" alt="youtube" class="red" ></a>
+		<a href="#"><img src="img/whatsapp.png" alt="whastapp" class="red"></a>
+		<a href="#"><img src="img/instagram.png" alt="instagram" class="red"></a>
+	</div>
+    </section>
+</body>
+</html>
